@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1fc08e7b737848ec64ebce016927502e72c2e28aad6adad8823a1e3e7176954e
-size 396
+# Merge Request
+
+## Part
+
+- [ ] FE
+- [ ] BE
+- [ ] Data
+
+## 어떤 이유로 MR를 하셨나요?
+
+- [ ] feature 병합(feature issue #를 남겨주세요)
+- [ ] 버그 수정(아래에 issue #를 남겨주세요)
+- [ ] 코드 개선
+- [ ] 기타(아래에 자세한 내용 기입해주세요)
+
+## 기능 상세 설명
+
+- 기능에서 어떤 부분이 구현되어야 하는 지 설명해주세요
