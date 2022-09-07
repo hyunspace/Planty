@@ -1,30 +1,3 @@
-.DS_Store
-
-############
-## REACT ###
-############
-
-# dependencies
-frontend/node_modules
-frontend/.pnp
-frontend/.pnp.js
-
-# testing
-frontend/coverage
-
-# production
-frontend/build
-
-# misc
-frontend/.DS_Store
-frontend/.env.local
-frontend/.env.development.local
-frontend/.env.test.local
-frontend/.env.production.local
-
-frontend/npm-debug.log*
-frontend/yarn-debug.log*
-frontend/yarn-error.log*
-
-#BSJ
-TIL/BSJ/dataProcess/plantDataXmltoJson/plantDtlData
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9f6fd681e4c74c72c35e885a149f56ff414a29bbfef5c75f2fdea1f91b954e3
+size 5175
