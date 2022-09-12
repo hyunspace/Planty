@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:92bd6150c40b252a0529c19d4894dbe88806469538c83fb8a47233b35a1134a6
-size 391
+"""
+ASGI config for backend project.
+
+It exposes the ASGI callable as a module-level variable named ``application``.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/3.2/howto/deployment/asgi/
+"""
+
+import os
+
+from django.core.asgi import get_asgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
+
+application = get_asgi_application()
