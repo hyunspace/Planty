@@ -1,21 +1,3 @@
-import styled from 'styled-components';
-
-const Tag = styled.button`
-  border: 1px solid #44855d;
-  border-radius: 15px;
-  font-size: 20px;
-  font-weight: 500;
-  padding-top: 1px;
-  text-align: center;
-  color: #44855d;
-  background-color: #fefee3;
-  padding: 5px 10px 5px 10px;
-  margin: 8px;
-`;
-
-// onclick 만들어야함
-const TagButton = (props) => {
-  return <Tag>{props.text}</Tag>;
-};
-
-export default TagButton;
+version https://git-lfs.github.com/spec/v1
+oid sha256:49ff515c04ef0c84fc4b40db3bfd9bcb06c877394378e2c0e3cda06237835452
+size 672
