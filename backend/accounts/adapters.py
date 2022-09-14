@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ea5e2171d26dbc97acd6c8b0f5398adb6667f5de21483a5a66d32cb60fb0b18f
-size 515
+from allauth.account.adapter import DefaultAccountAdapter
+
+
+class CustomAccountAdapter(DefaultAccountAdapter):
+
+    def save_user(self, request, user, form, commit=True):
+        data = form.cleaned_data
+        user = super().save_user(request, user, form, False)
+        nickname = data.get("nickname")
+        if nickname:
+            user.nickname = nickname
+
+        user.save()
+        return user
