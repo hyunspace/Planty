@@ -1,16 +1,3 @@
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Title = styled.div`
-  font-weight: 800;
-  font-size: 35px;
-`;
-
-const MagazineDetailPage = (props) => {
-  return;
-};
-
-export default MagazineDetailPage;
+version https://git-lfs.github.com/spec/v1
+oid sha256:42b1d10ba9e8f1d271ecd83d37369ca09447e75a464eb482d28488d938b34629
+size 4666
