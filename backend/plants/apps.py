@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0bbb56e2bc73f84941357274261c0c54e4b5c41996758630f6bda201c8abbefa
-size 144
+from django.apps import AppConfig
+
+
+class PlantsConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'plants'
