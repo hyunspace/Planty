@@ -1,24 +1,3 @@
-import React from 'react';
-import styled from 'styled-components';
-
-const GardenItem = () => {
-  return (
-    <Wrapper>
-      <GardenImg></GardenImg>
-    </Wrapper>
-  );
-};
-
-const Wrapper = styled.div`
-  width: 436px;
-  height: 568px;
-  border-radius: 15px;
-  overflow: hidden;
-`;
-
-const GardenImg = styled.div`
-  height: 300px;
-  background-color: ${({ theme }) => theme.themeColor[5]};
-`;
-
-export default GardenItem;
+version https://git-lfs.github.com/spec/v1
+oid sha256:af6a4131cbe6ed794e7b97ea1e90a01c1026dc7d0b87b48f268f5b103650dab4
+size 1803
