@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:89fa3af50837d563bc099f51ae48c76c3cf3477ee549849940c9e80d6dac178e
-size 258
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from . import views
+
+app_name = 'plants'
+
+router = DefaultRouter()
+router.register(r"", views.PlantDictViewSet, basename='')
+urlpatterns = [path("", include(router.urls))]
