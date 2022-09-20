@@ -1,16 +1,3 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from . import views
-from .views import MagazineLikeView
-
-
-app_name = 'magazines'
-
-router = DefaultRouter()
-router.register(r"", views.MagazineViewSet, basename="")
-
-urlpatterns = [
-    path("", include(router.urls)),
-    path('<int:pk>/like/', MagazineLikeView.as_view({'post': 'like'})),
-    ]
-## 추가예정
+version https://git-lfs.github.com/spec/v1
+oid sha256:dbd3379bd484d63f31768a2db6f96a14c800bdb6f216a0fc5c02a0ee0fa21679
+size 650
