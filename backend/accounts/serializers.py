@@ -1,15 +1,3 @@
-from rest_framework import serializers
-from dj_rest_auth.registration.serializers import RegisterSerializer
-
-
-class CustomRegisterSerializer(RegisterSerializer):
-    # 기본 설정 필드: username, password, email
-    # 추가 설정 필드: nickname
-    nickname = serializers.CharField(max_length=10)
-
-    def get_cleaned_data(self):
-        data = super().get_cleaned_data()
-        data['nickname'] = self.validated_data.get('nickname', '')
-
-        return data
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:9d665e43e7890058f85f31d74e1480e9718d76a525248bf185fcbca7ebdcaf98
+size 592
