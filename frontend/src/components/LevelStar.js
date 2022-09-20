@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2e55e082dce33ef93c3c47d8ecfca9472e150ff16f0021220c5c147aa8f5ce3d
-size 473
+import React from 'react';
+import StarIcon from '@mui/icons-material/Star';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  & .star {
+    color: #f9d726;
+  }
+`;
+
+const LevelStar = ({ level }) => {
+  const arr = [...Array(level)];
+  return (
+    <Wrapper>
+      {arr.map((e, i) => (
+        <StarIcon key={i} className="star" />
+      ))}
+    </Wrapper>
+  );
+};
+
+export default LevelStar;
