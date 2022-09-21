@@ -1,12 +1,3 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from . import views
-
-
-app_name = 'magazines'
-
-router = DefaultRouter()
-router.register(r"", views.MagazineViewSet, basename="")
-
-urlpatterns = [path("", include(router.urls))]
-## 추가예정
+version https://git-lfs.github.com/spec/v1
+oid sha256:de9c4bf7c6971e619601faaeffe7a4ac5d00978afb3a4540de83b4cabd5d2941
+size 634
