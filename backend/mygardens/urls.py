@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2135b6e82463d8b9a4f67bd79a3968ef6d0e3a86f812009b1445b8e4c076b095
-size 497
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from . import views
+from .views import DiaryViewSet
+
+
+app_name = 'mygardens'
+
+router = DefaultRouter()
+router.register(r"", views.MyGardenViewSet, basename="")
+
+urlpatterns = [
+    path('', include(router.urls)),
+    path('<int:my_garden_pk>/diary/', DiaryViewSet.as_view({'post': 'create'})),
+    path('<int:my_garden_pk>/diary/<int:diary_pk>/', DiaryViewSet.as_view({'put': 'update', 'delete':'destroy'})),
+]
