@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:666885e6dc38fb27163048f36482b1833e9cf3217674b73891109a62b918dd92
-size 264
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/homidu.iml" filepath="$PROJECT_DIR$/.idea/homidu.iml" />
+    </modules>
+  </component>
+</project>
