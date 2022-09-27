@@ -1,9 +1,3 @@
-from django.urls import path, include
-from .views import FollowViewSet, UsernameCheckViewSet, EmailCheckViewSet
-
-urlpatterns = [
-    path('<int:pk>/follow/', FollowViewSet.as_view({'post': 'follow'})),
-    path('usernamecheck/', UsernameCheckViewSet.as_view({'post': 'check'})),
-    path('emailcheck/', EmailCheckViewSet.as_view({'post': 'check'})),
-
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:284d99911f2c5fd21918f91c603d9df77a7fb3b00e5419a9200d06b3f8a4066e
+size 683
