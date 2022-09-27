@@ -1,18 +1,3 @@
-import React from 'react';
-import styled from 'styled-components';
-
-const GardenDiaryItem = () => {
-  return (
-    <Wrapper>
-      <h1>Diary</h1>
-    </Wrapper>
-  );
-};
-
-const Wrapper = styled.div`
-  width: 100%;
-  height: 320px;
-  background-color: ${({ theme }) => theme.themeColor[5]};
-`;
-
-export default GardenDiaryItem;
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c686bccf308df0722f296dbb35a829f21593d7d8238b49787d156d9ad9f8632
+size 325
