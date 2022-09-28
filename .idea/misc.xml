@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9d026843df12bc8ef113830cb234d3d3093540b2dbf4fd7e523801dafb15c584
-size 207
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (mini-bigdata-recom)" project-jdk-type="Python SDK" />
+</project>
