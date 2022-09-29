@@ -1,23 +1,3 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { fetchFeedList, fetchFeed, createFeed } from './feedAction';
-
-const initialState = {
-  loading: false,
-  feed: null,
-  feedList: null,
-  error: null,
-  success: false,
-};
-
-const feedSlice = createSlice({
-  name: 'feed',
-  initialState,
-  reducers: {},
-  extraReducers: {
-    [createFeed.pending]: (state) => {},
-    [createFeed.fulfilled]: (state) => {},
-    [createFeed.rejected]: (state) => {},
-  },
-});
-
-export default feedSlice.reducer;
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a69f6f2c924731e2aec12e0c4323e5cf240ed1476f71b6ddaa650107f75c9fd
+size 1442
