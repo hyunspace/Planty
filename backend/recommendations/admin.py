@@ -1,9 +1,3 @@
-from django.contrib import admin
-from .models import UserKeywordCount
-
-class UserKeywordCountAdmin(admin.ModelAdmin):
-    
-    list_display = [field.name for field in UserKeywordCount._meta.get_fields()]
-
-
-admin.site.register(UserKeywordCount, UserKeywordCountAdmin)
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef4c78f9b445965d8b94fb03652ccac48b0581f962fe875351a6b4ec09365ce2
+size 266
