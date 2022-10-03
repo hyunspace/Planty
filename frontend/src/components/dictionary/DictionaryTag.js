@@ -1,16 +1,3 @@
-import React from 'react';
-import { DictionaryTagWrapper } from '../../styles/dictionary/DictionaryComponentStyle';
-import DictionaryTagButton from './DictionaryTagButton';
-
-const DictionaryTag = ({ tagList }) => {
-  console.log('tag', tagList);
-  return (
-    <DictionaryTagWrapper>
-      {tagList.map((tag, i) => (
-        <DictionaryTagButton tag={tag} key={i} />
-      ))}
-    </DictionaryTagWrapper>
-  );
-};
-
-export default DictionaryTag;
+version https://git-lfs.github.com/spec/v1
+oid sha256:bfadef3f7b84fa22a9aa7669952a50b5ecbd7f3ddd0eb82256e29f76b08c258c
+size 444
