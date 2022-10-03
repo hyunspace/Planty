@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2eaeea490eec2ed19af9a1a0ca052124da01b17cbcd8fff66f819fd2303c2eee
-size 449
+import client from './client';
+
+export const petSafetyPlants = async () => {
+  const response = await client.get('plants/petsafety');
+
+  return response;
+};
+
+export const popularPlants = async () => {
+  const response = await client.get('plants/popular');
+
+  return response;
+};
+
+export const keywordRecommend = async (keyword) => {
+  const response = await client.get(
+    `recommendations/keyword/?keyword=${keyword}`,
+  );
+
+  return response;
+};
