@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:45bb5a2ac3fca26a1afa2640ae71ffd667e4b4cd24a1611f111cc4487ebf921b
-size 302
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (homidu)" project-jdk-type="Python SDK" />
+  <component name="PyCharmProfessionalAdvertiser">
+    <option name="shown" value="true" />
+  </component>
+</project>
