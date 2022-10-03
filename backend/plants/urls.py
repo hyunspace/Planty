@@ -1,11 +1,3 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from . import views
-
-app_name = 'plants'
-
-router = DefaultRouter()
-router.register(r'', views.PlantViewSet, basename='')
-urlpatterns = [
-    path('', include(router.urls))
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:c35d74446f6e6beb0a852de396e66498f2ac61b14ee0e7079f73c9554b6070f0
+size 260
