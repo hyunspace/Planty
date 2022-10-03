@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:243e65ad372fc34b2a659613fc017c9997d148689c5eab815c1fd9bf005a394f
-size 388
+import styled from 'styled-components';
+
+export const DictionaryTagWrapper = styled.div`
+  margin-top: 50px;
+  /* & button + button {
+    margin-left: 8px;
+  } */
+`;
+
+export const DictionaryTagButtonWrapper = styled.button`
+  background-color: transparent;
+  padding: 6px 16px;
+  margin-bottom: 4px;
+  margin-right: 8px;
+  border: 1px solid #a0a0a0;
+  border-radius: 24px;
+  font-size: 16px;
+  letter-spacing: -1px;
+  color: #6d6d6d;
+`;
