@@ -1,19 +1,3 @@
-import client from './client';
-
-export const gardenList = async (userName) => {
-  const response = client.get(`mygardens/user/${userName}`);
-
-  return response;
-};
-
-export const gardenUser = async (userName) => {
-  const response = client.get(`accounts/profile/${userName}`);
-
-  return response;
-};
-
-export const postFollowUser = async (username) => {
-  const response = client.post(`accounts/follow/${username}/`);
-
-  return response;
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:cdc119b80d81a512b5cba894154cd6888708a5ed228b44758772ca4660967c09
+size 959
