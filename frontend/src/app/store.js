@@ -1,16 +1,3 @@
-import { configureStore } from '@reduxjs/toolkit';
-import userReducer from '../features/user/userSlice';
-import dictionaryReducer from '../features/dictionary/dictionarySlice';
-import feedReducer from '../features/feed/feedSlice';
-import gardenReducer from '../features/garden/gardenSlice';
-
-const store = configureStore({
-  reducer: {
-    user: userReducer,
-    dictionary: dictionaryReducer,
-    feed: feedReducer,
-    garden: gardenReducer,
-  },
-});
-
-export default store;
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5f8e035cdebc191c9e645ab8d4465b3972a54f5751a7636c9b63af1ccb9de61
+size 573
