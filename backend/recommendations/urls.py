@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c7c3c38536c20bbab76f532ffaea040152d7bad8b70e50df1cf8e607b99b7653
-size 416
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from . import views
+
+app_name = 'recommendations'
+
+router = DefaultRouter()
+router.register(r'', views.RecommendViewSet, basename='')
+urlpatterns = [
+    path('keyword/', views.KeywordViewSet.as_view({'get': 'list'})),
+    path('user/', views.UserRecommendViewSet.as_view({'get': 'list'})),
+    path('', include(router.urls)),
+]
