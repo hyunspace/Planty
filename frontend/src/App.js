@@ -1,14 +1,3 @@
-import React from 'react';
-import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import IndexPage from './pages/IndexPage';
-
-const App = () => {
-  return (
-    <Routes>
-      <Route path="" element={<IndexPage />} />
-    </Routes>
-  );
-};
-
-export default App;
+version https://git-lfs.github.com/spec/v1
+oid sha256:eae1cc2221c21e50e2e281a1dbaa24b45aa4cd2f3b38282afde83b6e52e7afd3
+size 4118
