@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2be2c528861eeaec4ec569185af8b2db25b1628f748a9453f543140c2355be77
-size 675
+import { configureStore } from '@reduxjs/toolkit';
+import userReducer from '../features/user/userSlice';
+import dictionaryReducer from '../features/dictionary/dictionarySlice';
+import feedReducer from '../features/feed/feedSlice';
+import gardenReducer from '../features/garden/gardenSlice';
+import magazineReducer from '../features/magazine/magazineSlice';
+import recommendReducer from '../features/recommend/recommendSlice';
+
+const store = configureStore({
+  reducer: {
+    user: userReducer,
+    dictionary: dictionaryReducer,
+    feed: feedReducer,
+    garden: gardenReducer,
+    magazine: magazineReducer,
+    recommend: recommendReducer,
+  },
+});
+
+export default store;

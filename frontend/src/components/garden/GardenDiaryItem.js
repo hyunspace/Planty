@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a3a41e7c37d4156101c6404758a60767f58c7c67c99bd87a86c28da2d84e1e89
-size 574
+import React from 'react';
+import { GardenDiaryItemWrapper } from '../../styles/garden/GardenComponentStyle';
+import { useNavigate } from 'react-router-dom';
+
+const GardenDiaryItem = ({ diary }) => {
+  const { id, content, date_created, diary_img } = diary;
+  const navigate = useNavigate();
+
+  const onClickHandler = () => {
+    navigate(`?diary=${id}`);
+  };
+  return (
+    <GardenDiaryItemWrapper onClick={onClickHandler}>
+      <img src={diary_img} alt="" />
+      {/* <div>{date_created}</div> */}
+    </GardenDiaryItemWrapper>
+  );
+};
+
+export default GardenDiaryItem;
