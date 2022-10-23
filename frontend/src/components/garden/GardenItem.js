@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:275eb64dbd30b675ca785d7383a43622c8b661ec5936d8dc7972f8f7a1d8da74
-size 770
+import React from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import {
+  GardenItemWrapper,
+  GardenImg,
+} from '../../styles/garden/GardenComponentStyle';
+
+const GardenItem = ({ gardenPlant }) => {
+  const navigate = useNavigate();
+  const { id, plant, date_grow, img_url } = gardenPlant;
+  const { userName } = useParams();
+
+  return (
+    <GardenItemWrapper
+      onClick={() => {
+        navigate(`/garden/${userName}/${id}`);
+      }}
+    >
+      <GardenImg src={img_url} />
+      <div className="garden-header" onClick={() => navigate('/')}>
+        <div className="garden-title">{plant?.plant_name}</div>
+        <div className="garden-date-grow">{date_grow}</div>
+      </div>
+    </GardenItemWrapper>
+  );
+};
+
+export default GardenItem;

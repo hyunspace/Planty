@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c10833a6c2f0c59277d69f1ce2d673731ee80e79d5ddba876a614e64ddf7f17d
-size 1337
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.forms import UserChangeForm, UserCreationForm
+from django.utils.translation import ugettext_lazy as _
+from .models import User
+
+class MyUserChangeForm(UserChangeForm):
+    class Meta:
+        model = User
+        fields = '__all__'
+
+
+class MyUserCreationForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ('email','username', )
+
+
+class MyUserAdmin(UserAdmin):
+    fieldsets = (
+        (None, {'fields': ('email', 'username', 'nickname', 'exp', 'point', 'is_editor', 'is_private', 'profile_img', 'date_of_birth', 'age_group')}),
+        (_('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser',
+                                       'groups', 'user_permissions')}),
+        (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
+    )
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('email', 'password1', 'password2'),
+        }),
+    )
+    form = MyUserChangeForm
+    add_form = MyUserCreationForm
+    list_display = ('email', 'username', 'is_staff')
+    list_filter = ('is_staff', 'is_superuser', 'is_active', 'groups')
+    search_fields = ('email', 'username')
+    ordering = ('email',)
+
+admin.site.register(User, MyUserAdmin)

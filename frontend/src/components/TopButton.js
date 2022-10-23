@@ -1,3 +1,50 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d031ff162d3e44c9932eb43c1ad01b65299301bd4309e6faf11168cb7f0640e4
-size 1137
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import ArrowCircleUp from '@mui/icons-material/ArrowCircleUp';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+
+const TopButton = () => {
+  const onClickHandler = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+  return (
+    <Wrapper onClick={onClickHandler}>
+      <ArrowUpwardIcon />
+    </Wrapper>
+  );
+};
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 40px;
+  right: 10%;
+  /* right: 50px; */
+  cursor: pointer;
+
+  background-color: ${({ theme }) => theme.themeColor[5]};
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  border: 1px solid white;
+  box-shadow: 2px 2px 3px #999;
+
+  &:hover {
+    background-color: white;
+    color: gray;
+    box-shadow: 3px 3px 3px #999;
+    border: 2px solid rgb(217, 217, 217);
+    transition: all 0.5s;
+  }
+`;
+
+export default React.memo(TopButton);
