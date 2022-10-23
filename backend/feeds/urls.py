@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8fdd37d8eca786917a8badc83ef31d147956aa0797a91d357e72a7dbf9e9d258
-size 693
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from . import views
+from .views import FeedLikeViewSet, FeedCommentViewSet, MyFeedListViewSet
+
+
+app_name = 'feeds'
+
+router = DefaultRouter()
+router.register(r"", views.FeedViewSet, basename="")
+
+urlpatterns = [
+    path('user/<username>/', MyFeedListViewSet.as_view({'get': 'list'})),
+    path('<int:feed_pk>/like/', FeedLikeViewSet.as_view({'post': 'like'})),
+    path('<int:feed_pk>/comment/', FeedCommentViewSet.as_view({'post': 'create'})),
+    path('<int:feed_pk>/comment/<int:comment_pk>/', FeedCommentViewSet.as_view({'put': 'update', 'delete':'destroy'})),
+    path("", include(router.urls)),
+    ]

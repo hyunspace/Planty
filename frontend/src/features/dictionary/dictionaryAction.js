@@ -1,3 +1,69 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a6485e6cfa4eb986f883bb0109fddb26dcdaa14eeb5803cd6845fef17d4ae2b7
-size 1754
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import {
+  plantList,
+  plantItem,
+  plantSearch,
+  plantListPagination,
+  keywordRecommendPlant,
+} from '../../api/dictionary';
+
+export const fetchPlant = createAsyncThunk(
+  'dictionary/fetchPlant',
+  async (plantId, { rejectWithValue }) => {
+    try {
+      const { data } = await plantItem(plantId);
+
+      return data;
+    } catch (error) {
+      if (error.response && error.response.data.message) {
+        return rejectWithValue(error.response.data.message);
+      } else {
+        return rejectWithValue(error.message);
+      }
+    }
+  },
+);
+
+export const searchPlant = createAsyncThunk(
+  'dictionary/searchPlant',
+  async (keyword, { rejectWithValue }) => {
+    try {
+      const { data } = await plantSearch(keyword);
+      return data;
+    } catch (error) {}
+  },
+);
+
+export const fetchPlantListPagination = createAsyncThunk(
+  'dictionary/fetchPlantListPagination',
+  async (params, { rejectWithValue }) => {
+    try {
+      const { data } = await plantListPagination(params);
+
+      return data;
+    } catch (error) {
+      if (error.response && error.response.data.message) {
+        return rejectWithValue(error.response.data.message);
+      } else {
+        return rejectWithValue(error.message);
+      }
+    }
+  },
+);
+
+export const fetchKeywordRecommendPlant = createAsyncThunk(
+  'dictionary/fetchKeywordRecommendPlant',
+  async (keyword, { rejectWithValue }) => {
+    try {
+      const { data } = await keywordRecommendPlant(keyword);
+
+      return data;
+    } catch (error) {
+      if (error.response && error.response.data.message) {
+        return rejectWithValue(error.response.data.message);
+      } else {
+        return rejectWithValue(error.message);
+      }
+    }
+  },
+);
